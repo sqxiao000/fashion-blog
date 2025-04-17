@@ -6,6 +6,6 @@ As a finance student, my life increasingly started to revolve around financial m
 
 As the economy passes through cycles and the increasing widespread of news through social media, it became known that fashion trends tend to take on changes in correlation to changes in the economy. Thia dates back to forever in history, one of my favourite examples was the popularization of:
 
-This is a passion project:)
+This is a passion project :)
 
 I am joining two parts of my interests through data to see what I can find. Will it be possible to make accurate predictions in either market to gain an advantage? What implications does this have for the future?
