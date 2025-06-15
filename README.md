@@ -9,6 +9,6 @@ As the economy experiences cycles and impacts, it became known that fashion tren
 Using data and current economic outlooks, I want to see what I can conclude. Will it be possible to make accurate predictions in either market to gain an advantage? What implications does this have for the future?
 
 Over the summer, as I complete my internship, I want to focus on a few topics:
-*pleated skirts - I'm wearing one as I write this
-*gender-neutral clothing/masculine sihlouettes
-*best-performing fashion equity
+- pleated skirts - I'm wearing one as I write this
+- gender-neutral clothing/masculine sihlouettes
+- best-performing fashion equity
