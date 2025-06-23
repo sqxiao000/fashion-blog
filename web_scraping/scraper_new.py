@@ -1,41 +1,15 @@
-from bs4 import BeautifulSoup
-import requests
+import pytrends
+from pytrends.request import TrendReq
 
-headers={'User-Agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36'}
-url='https://www.google.com/search?q=pizza&ie=utf-8&oe=utf-8&num=10'
-html = requests.get(url,headers=headers)
-print(html.status_code)
+def trends(keyword):
+    pytrends = TrendReq(hl="en-US", tz=360)
+    pytrends.build_payload([keyword], cat=0, timeframe="today 12-m", geo="CA", gprop="")
+    trends_data = pytrends.interest_over_time()
+    return trends_data
 
-soup = BeautifulSoup(html.text, 'html.parser')
-allData = soup.find_all("div",{"class":"g"})
-
-g=0
-Data = [ ]
-l={}
-for i in range(0,len(allData)):
-    link = allData[i].find('a').get('href')
-
-    if(link is not None):
-        if(link.find('https') != -1 and link.find('http') == 0 and link.find('aclk') == -1):
-            g=g+1
-            l["link"]=link
-            try:
-                l["title"]=allData[i].find('h3',{"class":"DKV0Md"}).text
-            except:
-                l["title"]=None
-            try:
-                l["description"]=allData[i].find("div",{"class":"lyLwlc"}).text
-            except:
-                l["description"]=None
-
-            l["position"]=g
-            Data.append(l)
-
-            l={}
-
-        else:
-            continue
-    else:
-        continue
-
-print(Data)
+print(trends("suit jacket"))
+print(trends("suit"))
+print(trends("dress shirt"))
+print(trends("dress pants"))
+print(trends("slacks"))
+print(trends("dress shirt"))
